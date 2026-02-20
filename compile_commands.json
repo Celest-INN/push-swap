@@ -1,0 +1,34 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I.",
+      "-c",
+      "-o",
+      "push_swap.o",
+      "push_swap.c"
+    ],
+    "directory": "/home/erzhuo/Projects/push_swap",
+    "file": "/home/erzhuo/Projects/push_swap/push_swap.c",
+    "output": "/home/erzhuo/Projects/push_swap/push_swap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I.",
+      "-c",
+      "-o",
+      "1.stack/stack_init.o",
+      "1.stack/stack_init.c"
+    ],
+    "directory": "/home/erzhuo/Projects/push_swap",
+    "file": "/home/erzhuo/Projects/push_swap/1.stack/stack_init.c",
+    "output": "/home/erzhuo/Projects/push_swap/1.stack/stack_init.o"
+  }
+]

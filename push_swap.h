@@ -3,36 +3,41 @@
 
 # include <limits.h>
 # include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+# include <stdlib.h> // malloc, NUll
+# include <unistd.h> // write
 
 /*Node arch*/
-typedef struct s_stack
+typedef struct s_node
 {
-	int				value;
-	int				index;
-	int				push_price;
-	int				median_sup;
-	int				cheapest;
-	struct s_stack	*target;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-}					t_stack;
+	int				v;
+	int				raw;
+	struct s_node	*next;
+} 	t_node;
 
 /*stack*/
+typedef struct s_stack
+{
+	t_node	*head;
+	int		size;	
+}	t_stack;
+
+/* stack_init.c */
+void	stack_init(t_stack *s)；
+t_node	*node_new(int v, int raw);
+
+/* stack_push_pop.c */
+void	stack_push_top(t_stack *s, t_node *n);
+t_node	*stack_pop_top(t_stack *s);
+
+/* stack_free.c */
+void	stack_clear(t_stack *s);
+
+/* stack_utils.c */
+int	stack_is_sorted(t_stack *s);
+t_node	*stack_last(t_stack *s);
+
+/* stack_debug.c */
 
 
-/*command*/
-void				pa(t_stack **a, t_stack **b, int bool);
-void				pb(t_stack **a, t_stack **b, int bool);
-void				rra(t_stack **a, int bool);
-void				rrb(t_stack **b, int bool);
-void				rrr(t_stack **a, t_stack **b, int bool);
-void				ra(t_stack **a, int bool);
-void				rb(t_stack **b, int bool);
-void				rr(t_stack **a, t_stack **b, int bool);
-void				sa(t_stack **a, int bool);
-void				sb(t_stack **b, int bool);
-void				ss(t_stack **a, t_stack **b, int bool);
 
 #endif
