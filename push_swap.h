@@ -22,7 +22,7 @@ typedef struct s_stack
 }	t_stack;
 
 /* stack_init.c */
-void	stack_init(t_stack *s)；
+void	stack_init(t_stack *s);
 t_node	*node_new(int v, int raw);
 
 /* stack_push_pop.c */
