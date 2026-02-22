@@ -38,6 +38,26 @@ t_node	*stack_last(t_stack *s);
 
 /* stack_debug.c */
 
+/* ops_base.c */
+int	swap_top(t_stack *s);
+int	push(t_stack *dst, t_stack *src);
+int	rotate(t_stack *s);
+int	rev_rotate(t_stack *s);
 
+/* cmd x 4 */
+void    sa(t_stack *a);
+void    sb(t_stack *b);
+void    ss(t_stack *a, t_stack *b);
+
+void    pa(t_stack *a, t_stack *b);
+void    pb(t_stack *a, t_stack *b);
+
+void    ra(t_stack *a);
+void    rb(t_stack *b);
+void    rr(t_stack *a, t_stack *b);
+
+void    rra(t_stack *a);
+void    rrb(t_stack *b);
+void    rrr(t_stack *a, t_stack *b);
 
 #endif
