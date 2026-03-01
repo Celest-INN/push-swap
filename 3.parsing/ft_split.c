@@ -1,21 +1,5 @@
 #include "push_swap.h"
 
-void	*free_split(char **result)
-{
-	int	i;
-
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (result[i])
-	{
-		free (result[i]);
-		i++;
-	}
-	free(result);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
