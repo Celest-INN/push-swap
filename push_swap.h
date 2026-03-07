@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: erzhuo <erzhuo@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/07 22:42:19 by erzhuo            #+#    #+#             */
+/*   Updated: 2026/03/07 22:42:19 by erzhuo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -93,6 +105,13 @@ int	parse_args(int argc, char **argv, t_stack *a);
 void	sort_2(t_stack *a);
 void	sort_3(t_stack *a);
 void	sort_4(t_stack *a, t_stack *b);
+
+/* turkish.c */
+void	index_stack(t_stack *a);
+void	turkish_sort(t_stack *a, t_stack *b);
+
+/* push_swap main dispatcher */
+void	push_swap(t_stack *a, t_stack *b);
 /****************************** sort ******************************/
 
 #endif
