@@ -36,6 +36,8 @@ void	stack_clear(t_stack *s);
 /* stack_utils.c */
 int	stack_is_sorted(t_stack *s);
 t_node	*stack_last(t_stack *s);
+int	get_max_stack(t_stack *s, int *max_i);
+int	get_min_stack(t_stack *s, int *min_i);
 
 /* stack_debug.c */
 /****************************** stack ******************************/
@@ -85,5 +87,12 @@ int	fill_array(int argc, char **argv, int *arr);
 /* parsing.c */
 int	parse_args(int argc, char **argv, t_stack *a);
 /****************************** parsing ******************************/
+
+/****************************** sort ******************************/
+/* sort_simple.c */
+void	sort_2(t_stack *a);
+void	sort_3(t_stack *a);
+void	sort_4(t_stack *a, t_stack *b);
+/****************************** sort ******************************/
 
 #endif

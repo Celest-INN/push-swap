@@ -31,3 +31,53 @@ t_node	*stack_last(t_stack *s)
 	}
 	return (cur);
 }
+
+int	get_max_stack(t_stack *s, int *max_i)
+{
+	int		max_val;
+	int		i;
+	t_node	*n;
+
+	if (!s || !s->head || !max_i)
+		return (0);
+	max_val =s->head->v;
+	*max_i = 0;
+	n = s->head->next;
+	i = 1;
+	while (n)
+	{
+		if(max_val < n->v)
+		{
+			max_val = n->v;
+			*max_i = i;
+		}
+		n = n->next;
+		i++;
+	}
+	return (max_val);
+}
+
+int	get_min_stack(t_stack *s, int *min_i)
+{
+	int		min_val;
+	int		i;
+	t_node	*n;
+
+	if (!s || !s->head || !min_i)
+		return (0);
+	min_val =s->head->v;
+	*min_i = 0;
+	n = s->head->next;
+	i = 1;
+	while (n)
+	{
+		if(min_val > n->v)
+		{
+			min_val = n->v;
+			*min_i = i;
+		}
+		n = n->next;
+		i++;
+	}
+	return (min_val);
+}
